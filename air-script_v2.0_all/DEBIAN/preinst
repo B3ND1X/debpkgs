@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Ensure we are being ran as root
+if [ $(id -u) -ne 0 ]; then
+	echo "This script must be ran as root"
+	exit 1
+fi
+
+	cd /home/*
+	git clone https://github.com/B3ND1X/air-script
+	rm -rf /bin/air-script
+	mkdir /bin/air-script
+	cp /home/*/air-script/* /bin/air-script
+	cp -R /home/*/air-script/logs /bin/air-script
+	cp -R /home/*/air-script/tools /bin/air-script
+	cp -R /home/*/air-script/img /bin/air-script
+	sudo chmod -R 755 /bin/air-script/*
+	sudo chmod -R 755 /bin/air-script/logs/*
+	sudo chmod -R 755 /bin/air-script/tools/*
+	sudo chmod -R 755 /bin/air-script/img/*
+	export PATH=/bin/air-script:$PATH
+	rm -rf /home/*/air-script
+

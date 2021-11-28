@@ -1,0 +1,8 @@
+Package: Air-Script
+Version: 1.0.9
+Architecture: all
+Essential: no
+Priority: optional
+Depends: aircrack-ng,postfix,sendemail,macchanger
+Maintainer: Liam Bendix
+Description: Air Script is a userfriendly WiFi pwning Swiss Army knife

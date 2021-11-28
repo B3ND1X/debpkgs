@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Ensure we are being ran as root
+if [ $(id -u) -ne 0 ]; then
+	echo "This script must be ran as root"
+	exit 1
+fi
+
+cd /bin/air-script
+sudo chmod -R 755 *
+cd tools
+chmod -R 755 *
+cd ..
+cd img
+chmod -R 755 *
+cd ..
+cd logs
+chmod -R 755 *
+exit
+

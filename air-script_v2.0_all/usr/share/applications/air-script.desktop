@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=air-script
+Comment=
+Exec=sudo /bin/air-script/pwn.sh
+Icon=/bin/air-script/img/air-script-icon.xpm
+Path=
+Terminal=true
+StartupNotify=false
+Categories=Wireless Attacks;
